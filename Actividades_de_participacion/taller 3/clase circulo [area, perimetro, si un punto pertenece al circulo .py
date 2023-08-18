@@ -10,5 +10,7 @@ class cirulo:
     def perimetro_circulo(self):
         perimetro = 2 * math.pi * self.radio
         return perimetro
-    
-# me falta el punto 
+    def pertenecer_circulo(self, point):
+        distance = math.sqrt((point[0] - self.center[0]) ** 2 + (point[1] - self.center[1]) ** 2)
+        return distance <= self.radio
+
